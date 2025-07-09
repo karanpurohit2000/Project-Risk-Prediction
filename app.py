@@ -15,7 +15,6 @@ load_dotenv()
 # --- Configuration ---
 st.set_page_config(
     page_title="AI Project Risk Predictor",
-    page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -645,7 +644,7 @@ def main():
     # Header
     st.markdown("""
     <div class="main-header">
-        <h1>🚀 AI Project Risk Predictor</h1>
+        <h1>AI Project Risk Predictor</h1>
         <p>Intelligent risk assessment powered by machine learning and AI insights</p>
         <p><small>Advanced analytics • Real-time predictions • AI-powered recommendations</small></p>
     </div>
