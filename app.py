@@ -23,11 +23,19 @@ st.set_page_config(
 @st.cache_resource
 def load_ml_model():
     try:
-        model = joblib.load('random_forest_model.joblib')
-        scaler = joblib.load('scaler.joblib')
-        feature_names = joblib.load('feature_names.joblib')
+        st.write("✅ Current working directory:", os.getcwd())
+        st.write("✅ Files in CWD:", os.listdir("."))
+        st.write("✅ Files in models/:", os.listdir("models"))
+
+        model = joblib.load("models/random_forest_model.joblib")
+        scaler = joblib.load("models/scaler.joblib")
+        feature_names = joblib.load("models/feature_names.joblib")
+
+        st.success("✅ Model, scaler, and features loaded successfully!")
         return model, scaler, feature_names
+
     except Exception as e:
+        st.error(f"❌ Could not load model: {e}")
         return None, None, None
 
 # Load ML model once at startup
