@@ -23,9 +23,9 @@ st.set_page_config(
 @st.cache_resource
 def load_ml_model():
     try:
-        model = joblib.load('models/random_forest_model.joblib')
-        scaler = joblib.load('models/scaler.joblib')
-        feature_names = joblib.load('models/feature_names.joblib')
+        model = joblib.load('random_forest_model.joblib')
+        scaler = joblib.load('scaler.joblib')
+        feature_names = joblib.load('feature_names.joblib')
         return model, scaler, feature_names
     except Exception as e:
         return None, None, None
